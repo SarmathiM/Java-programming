@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n<99 || n>999){
+            System.out.println("No");
+            return;
+        }
+        int temp = n;
+        int res = 0;
+        while(temp>0){
+            int rem = temp%10;
+            res=res+rem*rem*rem;
+            temp=temp/10;
+            
+        }
+        if(res==n){
+            System.out.println("Yes");
+        }
+    }
+}
