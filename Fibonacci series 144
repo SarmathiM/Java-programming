@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        if(n<1||n>20||m<1||m>20||n>m){
+            System.out.println("Invalid Input");
+            return;
+        }
+        int a = 0;
+        int b = 1;
+        double sum = 0;
+        int cr;
+        for(int i=1;i<=m;i++){
+            if(i==1){
+                cr = 0;
+            }
+            else if(i==2){
+                cr = 1;
+            }
+            else{
+                cr=a+b;
+                a=b;
+                b=cr;
+            }
+            if(i>=n){
+                sum=sum+cr;
+            }
+        }
+        System.out.println("The Sum of Fibonacci value is "+sum);
+    }
+}
