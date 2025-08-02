@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        int pc = 0;
+        int nc = 0;
+        for(int i=0;i<n;i++){
+            int num = sc.nextInt();
+            if(num>0){
+                pc++;
+            }
+            else if(num<0){
+                nc++;
+            }
+        }
+        System.out.printf("Count of Positive Integer is %.2f\n",(float)pc);
+        System.out.printf("Count of Negative Integer is %.2f\n",(float)nc);
+    }
+}
