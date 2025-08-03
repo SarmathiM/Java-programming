@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    static void printNum(int i,int n){
+        if(i>n){
+            return;
+        }
+        System.out.print(i+" ");
+        printNum(i+1,n);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n>=1 && n<=50){
+            System.out.println("The first "+ n +" Natural Numbers are:");
+            printNum(1,n);
+        }
+        else{
+            System.out.println("Enter a Valid Input!!!!!!!!!!!!!!!!!!!!!!!!");
+        }
+    }
+}
